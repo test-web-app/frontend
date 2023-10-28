@@ -12,13 +12,13 @@ function Form(props) {
     },[props.article])
 
     const updateArticle = () => {
-        APIService.UpdateArticle(props.article.id, {title, description})
+        APIService.UpdateArticle(props.apiUrl, props.article.id, {title, description})
         .then(resp => props.updatedData(resp))
         .catch(error => console.log(error))
     }
 
     const instertArticle = () => {
-        APIService.InsertArticle({title, description})
+        APIService.InsertArticle(props.apiUrl, {title, description})
         .then(resp => props.insertedArticle(resp))
         .catch(error => console.log(error))
     }

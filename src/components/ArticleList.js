@@ -9,7 +9,7 @@ function ArticleList(props) {
     }
 
     const deleteArticle = (article) => {
-        APIService.DeleteArticle(article.id)
+        APIService.DeleteArticle(props.apiUrl, article.id)
         .then(() => props.deleteArticle(article))
     }
 

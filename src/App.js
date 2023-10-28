@@ -76,8 +76,8 @@ function App() {
       </div>
       <br/>
       <br/>
-        <ArticleList articles = {articles} editArticle = {editArticle} deleteArticle = {deleteArticle}/>
-        {editedArticle ? <Form article = {editedArticle} updatedData = {updatedData} insertedArticle = {insertedArticle}/> : null}
+        <ArticleList articles = {articles} editArticle = {editArticle} deleteArticle = {deleteArticle} apiUrl = {apiUrl}/>
+        {editedArticle ? <Form article = {editedArticle} updatedData = {updatedData} insertedArticle = {insertedArticle} apiUrl = {apiUrl}/> : null}
     
     </div>
   );
