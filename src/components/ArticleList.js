@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import APIService from './APIService'
 
 
@@ -44,5 +45,12 @@ function ArticleList(props) {
     </div>
   )
 }
+
+ArticleList.propTypes = {
+  apiUrl: PropTypes.string.isRequired,
+  articles: PropTypes.array.isRequired,
+  editArticle: PropTypes.func.isRequired,
+  deleteArticle: PropTypes.func.isRequired,
+};
 
 export default ArticleList

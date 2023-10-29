@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import PropTypes from 'prop-types';
 import APIService from './APIService'
 
 
@@ -62,5 +63,12 @@ function Form(props) {
     </div>
     )
 }
+
+Form.propTypes = {
+    apiUrl: PropTypes.string.isRequired,
+    article: PropTypes.object.isRequired,
+    updatedData: PropTypes.func.isRequired,
+    insertedArticle: PropTypes.func.isRequired,
+  };
 
 export default Form
