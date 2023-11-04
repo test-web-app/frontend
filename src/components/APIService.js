@@ -1,6 +1,6 @@
 export default class APIService {
     static UpdateArticle(apiUrl, id, body) {
-        return fetch(`${apiUrl}/update/${id}`, {
+        return fetch(`${apiUrl}/api/update/${id}`, {
             'method':'PUT',
             headers: {
               'Content-Type': 'application/json'
@@ -11,7 +11,7 @@ export default class APIService {
     }
 
     static InsertArticle(apiUrl, body) {
-        return fetch(`${apiUrl}/add`, {
+        return fetch(`${apiUrl}/api/add`, {
             'method':'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -22,7 +22,7 @@ export default class APIService {
     }
 
     static DeleteArticle(apiUrl, id) {
-        return fetch(`${apiUrl}/delete/${id}`, {
+        return fetch(`${apiUrl}/api/delete/${id}`, {
             'method':'DELETE',
             headers: {
               'Content-Type': 'application/json'

@@ -8,10 +8,14 @@ function App() {
 
   const [articles, setArticles] = useState([])
   const [editedArticle, setEditedArticle] = useState(null)
-  const apiUrl = process.env.REACT_APP_API_URL;
+  let apiUrl = '';
+
+  if (process.env.REACT_APP_API_HOST && process.env.REACT_APP_API_PORT) {
+      apiUrl = `http://${process.env.REACT_APP_API_HOST}:${process.env.REACT_APP_API_PORT}`;
+  }
 
   useEffect(() => {
-    fetch(`${apiUrl}/get`, {
+    fetch(`${apiUrl}/api/get`, {
       'method':'GET',
       headers: {
         'Content-Type': 'application/json'
